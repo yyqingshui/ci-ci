@@ -15,4 +15,4 @@ jobs:
           -H "accept: application/vnd.github+json" \
           -H "authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           https://api.github.com/repos/yyqingshui/ci-ci/merges \
-          -d '{"base":"develop","head": ${{ github.ref }} }'
+          -d '{"base":"develop","head": "${{ github.ref }}" }'
