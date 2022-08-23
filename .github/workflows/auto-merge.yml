@@ -12,8 +12,7 @@ jobs:
         run: |
           curl \
           -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "content-type: application/json" \
-          -H "authorization: Bearer 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" \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: token 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" \
           https://api.github.com/repos/yyqingshui/ci-ci/merges \
           -d '{"base":"develop","head":"master"}'
