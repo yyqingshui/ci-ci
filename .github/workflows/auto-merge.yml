@@ -13,6 +13,6 @@ jobs:
           curl \
           -X POST \
           -H "Accept: application/vnd.github+json" \
-          -H "Authorization: token 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" \
+          -H "Authorization: token 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" \
           https://api.github.com/repos/yyqingshui/ci-ci/merges \
           -d '{"base":"develop","head":"master"}'
