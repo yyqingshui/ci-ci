@@ -1,0 +1,19 @@
+name: autoMerge
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: auto-merge
+        run: |
+          curl \
+          -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "content-type: application/json" \
+          -H "authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+          https://api.github.com/repos/yyqingshui/ci-ci/merges \
+          -d '{"base":"develop","head":"master"}'
